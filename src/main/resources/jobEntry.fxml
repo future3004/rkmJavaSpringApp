@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.RadioButton?>
+<AnchorPane prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.JobCreationController">
+   <children>
+      <Label layoutX="50.0" layoutY="10.0" text="Create New Job" />
+       <Text fx:id="errorMessage" layoutX="300.0" layoutY="16.0" fill="red"/>
+       <Text fx:id="successMessage" layoutX="298.0" layoutY="16.0" fill="green"/>
+
+                        <!-- Customer Info -->
+       <Label layoutX="220.0" layoutY="45.0" text="Enter Customer Information" />
+
+       <Text layoutX="150.0" layoutY="88.0"  text="Customer Name : " />
+       <TextField  fx:id="customerName" layoutX="300.0" layoutY="65.0" />
+       <Text layoutX="150.0" layoutY="130.0"  text="Customer Phone # : " />
+       <TextField  fx:id="customerPhone" layoutX="300.0" layoutY="110.0" />
+       <Text layoutX="150.0" layoutY="170.0"  text="Address : " />
+       <TextField  fx:id="customerAddress"  layoutX="300.0" layoutY="160.0" />
+
+
+            <!-- Job Details -->
+       <Label layoutX="220.0" layoutY="200.0" text="Enter Job Information" />
+
+       <Text layoutX="150.0" layoutY="260.0"  text="Job Name : " />
+       <TextField  fx:id="jobNameField" layoutX="300.0" layoutY="240.0" />
+       <Text layoutX="280.0" layoutY="300.0"  text="Job Description " />
+       <TextArea fx:id="jobDescField" prefWidth="400.0" prefHeight="150.0" layoutX="100.0" layoutY="315.0" wrapText="true"/>
+
+       <Label layoutX="305.0" layoutY="510.0" text="Pre-Production Stage" />
+       <RadioButton fx:id="preStage" layoutX="280.0" layoutY="510.0" selected="true"/>
+      <Button fx:id="btnHome" layoutX="180.0" layoutY="560.0"  mnemonicParsing="false" text="BACK TO HOME" />
+       <Button fx:id="submitJobBtn" layoutX="480.0" layoutY="560.0"  mnemonicParsing="false"  text="SUBMIT" />
+   </children>
+</AnchorPane>

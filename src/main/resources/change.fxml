@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="850.0" xmlns:fx="http://javafx.com/javafx/1" fx:controller="com.example.demo.SecondaryController">
+<children>
+    <Button fx:id="addButton" layoutX="100.0" layoutY="365.0"  mnemonicParsing="false" onAction="#addEmployee" text="Add Employee" />
+    <Button fx:id="editButton" layoutX="220.0" layoutY="365.0" mnemonicParsing="false" onAction="#editEmployee" text="Edit Employee"/>
+    <Button fx:id="deleteButton" layoutX="350.0" layoutY="365.0" mnemonicParsing="false" onAction="#deleteEmployee" text="Delete Employee"/>
+    <Button fx:id="homeButton" layoutX="700.0" layoutY="365.0" mnemonicParsing="false" onAction="#backHome" text="HOME"/>
+    <Label layoutX="650.0" layoutY="15.0" text="Manage Your Employees"/>
+    <TableView fx:id="employeeTable" layoutX="20.0" layoutY="15.0" prefHeight="334.0" prefWidth="545.0">
+
+        <columns>
+            <TableColumn fx:id="idCol" prefWidth="62.0" text="Emp_ID" />
+            <TableColumn fx:id="firstNameCol" prefWidth="113.0" text="First Name" />
+            <TableColumn fx:id="lastNameCol" prefWidth="115.0" text="Last Name" />
+            <TableColumn fx:id="emailCol" prefWidth="150.0" text="E-mail" />
+            <TableColumn fx:id="phoneCol" prefWidth="105.0" text="Phone Number" />
+        </columns>
+
+    </TableView>
+</children>
+</AnchorPane>
+
+

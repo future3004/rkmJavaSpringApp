@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+        <?import javafx.scene.control.Button?>
+        <?import javafx.scene.layout.AnchorPane?>
+        <?import javafx.scene.control.Label?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.text.Text?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SecondaryController">
+<children>
+    <Label layoutX="256.0" layoutY="10.0" text="ADD EMPLOYEE(S)" />
+    <Text layoutX="200.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name : " wrappingWidth="69.677734375" />
+    <TextField id="FirstName" fx:id="firstName" layoutX="300.0" layoutY="55.0" />
+    <Text layoutX="200.0" layoutY="120.0"  text="Last Name : " />
+    <TextField id="LastName"  fx:id="lastName" layoutX="300.0" layoutY="100.0" />
+    <Text layoutX="200.0" layoutY="160.0"  text="Email : " />
+    <TextField id="Email"  fx:id="email" layoutX="300.0" layoutY="140.0" />
+    <Text layoutX="200.0" layoutY="200.0"  text="Phone Number : " />
+    <TextField id="PhoneNum"  fx:id="phoneNum" layoutX="300.0" layoutY="180.0" />
+    <Text layoutX="200.0" layoutY="240.0"  text="Employee ID : " />
+    <TextField fx:id="employeeID" promptText="numbers only" layoutX="300.0" layoutY="220.0" />
+
+    <Button fx:id="addBtn" layoutX="200.0" layoutY="280.0" mnemonicParsing="false" onAction="#employeeScreenAdd" text="ADD"/>
+    <Button fx:id="cancelBtn" layoutX="353.0" layoutY="280.0" mnemonicParsing="false" onAction="#employeeScreenCancel" text="CANCEL"/>
+    <Button fx:id="homeBtn" layoutX="253.0" layoutY="350.0" mnemonicParsing="false" onAction="#backToEmpManager" text="Employee Home" />
+</children>
+</AnchorPane>
