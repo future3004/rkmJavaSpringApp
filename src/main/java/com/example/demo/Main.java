@@ -92,21 +92,25 @@ public class Main extends Application {
      */
     @Override
     public void start(Stage primaryStage) throws Exception {
-        //URL url = new File("src/main/resources/fxml/main.fxml").toURL();
-        //Parent root = FXMLLoader.load(url);
 
-        //springContext = SpringApplication.run(Main.class);
-        //FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("../../../../resources/fxml/main.fxml"));
-        //fxmlLoader.setControllerFactory(springContext::getBean);
-
+        // two ways to do
         //Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("main.fxml"));
         //Parent root = FXMLLoader.load(getClass().getResource("/main.fxml"));
-
 
         // Add this if you need this class autowired
         //springContext.getAutowireCapableBeanFactory().autowireBean(this);
 
-        /*Connection conn = null;
+        // create employee table - function call
+        createEmployeeTable();
+
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
+
+    }
+
+    private void createEmployeeTable() {
+
+        Connection conn = null;
         Statement stmt = null;
         try {
             // STEP 1: Register JDBC driver
@@ -121,7 +125,7 @@ public class Main extends Application {
             //STEP 3: Execute a query
             System.out.println("Creating table in given database...");
             stmt = conn.createStatement();
-            String sql =  "CREATE TABLE EMPLOYEE_TEST3 " +
+            String sql =  "CREATE TABLE IF NOT EXISTS EMPLOYEE_TEST3 " +
                     "(ID INTEGER not NULL, " +
                     " FIRST_NAME VARCHAR(255) not NULL, " +
                     " LAST_NAME VARCHAR(255) not NULL, " +
@@ -131,25 +135,6 @@ public class Main extends Application {
             stmt.executeUpdate(sql);
             System.out.println("Created table in given database...");
 
-            stmt = conn.createStatement();
-            String sql2 = "INSERT INTO EMPLOYEE_TEST3 " + "VALUES (1234,'Jane', 'Ali', 'ali@test.com', '234-567-9786')";
-
-            stmt.executeUpdate(sql2);
-            sql = "INSERT INTO EMPLOYEE_TEST3 " + "VALUES (456, 'Mahnaz', 'Fatma', 'fatma@acn.com', '101-567-9700')";
-
-            stmt.executeUpdate(sql);
-            sql = "INSERT INTO EMPLOYEE_TEST3 " + "VALUES (5678, 'Zaid', 'Khan', 'ali@som.com', '2345679786')";
-
-            stmt.executeUpdate(sql);
-            sql = "INSERT INTO EMPLOYEE_TEST3 " + "VALUES(567, 'Sumit', 'Mittal', 'mittal@test.com', '2346797868')";
-
-            stmt.executeUpdate(sql);
-
-            sql = "INSERT INTO EMPLOYEE_TEST3 " + "VALUES(001, 'Akdk', 'Gdhd', 'mt@test2.com', '')";
-
-            stmt.executeUpdate(sql);
-
-            System.out.println("Inserted records into the table...");
 
             // STEP 4: Clean-up environment
             stmt.close();
@@ -172,10 +157,7 @@ public class Main extends Application {
                 se.printStackTrace();
             } //end finally try
         } //end try
-        System.out.println("Goodbye!");*/
-
-        primaryStage.setScene(new Scene(root));
-        primaryStage.show();
+        System.out.println("Goodbye!");
 
     }
 }

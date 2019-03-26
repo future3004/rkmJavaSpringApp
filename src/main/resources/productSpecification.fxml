@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.ListView?>
+<AnchorPane prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.JobProductSpecification">
+    <children>
+        <Label layoutX="250.0" layoutY="10.0" text="Add Product Specifications" />
+        <Text fx:id="errorMessage" layoutX="550.0" layoutY="18.0" fill="red"/>
+        <Text fx:id="successMessage" layoutX="500.0" layoutY="18.0" fill="green"/>
+
+        <!-- Job table -->
+        <Label layoutX="80.0" layoutY="25.0" text="Jobs(Pre-Production)"/>
+        <TableView fx:id="jobsTable" layoutX="20.0" layoutY="50.0" prefHeight="334.0" prefWidth="555.0">
+
+            <columns>
+                <TableColumn fx:id="jobNameCol" prefWidth="113.0" text="Job Name" />
+                <TableColumn fx:id="jobDescCol" prefWidth="115.0" text="Job_Desc" />
+                <TableColumn fx:id="stageCol" prefWidth="150.0" text="Job Stage" />
+                <TableColumn fx:id="customerNameCol" prefWidth="105.0" text="Customer Name" />
+                <TableColumn fx:id="customerPhoneCol" prefWidth="105.0" text="Customer Phone" />
+            </columns>
+
+        </TableView>
+
+        <!-- Create a Product -->
+        <Label layoutX="650.0" layoutY="60.0" text="Selected Job: " />
+        <Text fx:id="selectedJobTxt" layoutX="750.0" layoutY="72.0" fill="blue" />
+        <Label layoutX="700.0" layoutY="90.0" text="Available Components" />
+        <ListView fx:id="componentsListView" layoutX="630.0" layoutY="115.0" prefHeight="205.0" visible="false"/>
+
+        <!-- Components BreakDown -->
+        <Text layoutX="640.0" layoutY="350.0" text="Selected Component(s) BreakDown"/>
+        <Text layoutX="642.0" layoutY="365.0" text="(component name = price in USD)"/>
+        <Text fx:id="selectedCompsText" layoutX="640.0" layoutY="390.0" />
+
+        <Text layoutX="650.0" layoutY="510.0" text="TAX ( 3.4% ) : " fill="red"/>
+        <Text layoutX="650.0" layoutY="535.0" text="TOTAL PRICE ( $ ) : " fill="red"/>
+        <Text fx:id="taxText" layoutX="760.0" layoutY="510.0"  />
+        <Text fx:id="totalText" layoutX="760.0" layoutY="535.0" />
+
+        <Text layoutX="640.0" layoutY="645.0" text="** total price includes a 10% markup"/>
+
+        <!-- Buttons -->
+        <Button fx:id="previewCompBtn" layoutX="750.0" layoutY="580.0"  mnemonicParsing="false" text="PREVIEW COST"/>
+        <Button fx:id="saveCompBtn" layoutX="900.0" layoutY="580.0"  mnemonicParsing="false" text="ADD TO JOB"/>
+        <Button fx:id="product_specBtnHome" layoutX="110.0" layoutY="650.0"  mnemonicParsing="false" text="BACK TO HOME" />
+        <Button fx:id="selectJobBtn" layoutX="360.0" layoutY="650.0"  mnemonicParsing="false"  text="CREATE A PRODUCT" />
+    </children>
+</AnchorPane>

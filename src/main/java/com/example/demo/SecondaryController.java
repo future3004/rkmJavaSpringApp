@@ -48,17 +48,17 @@ public class SecondaryController implements Initializable {
 
     // Employee Manager tableView
     @FXML
-    private TableView<Employee> employeeTable;
+    public TableView<Employee> employeeTable;
     @FXML
-    private TableColumn<Employee, String> idCol;
+    public TableColumn<Employee, String> idCol;
     @FXML
-    private TableColumn<Employee, String> firstNameCol;
+    public TableColumn<Employee, String> firstNameCol;
     @FXML
-    private TableColumn<Employee, String> lastNameCol;
+    public TableColumn<Employee, String> lastNameCol;
     @FXML
-    private TableColumn<Employee, String> emailCol;
+    public TableColumn<Employee, String> emailCol;
     @FXML
-    private TableColumn<Employee, String> phoneCol;
+    public TableColumn<Employee, String> phoneCol;
 
     // employee screen/window
     @FXML

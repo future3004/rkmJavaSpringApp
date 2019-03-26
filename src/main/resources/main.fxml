@@ -13,7 +13,8 @@
 
        <Text layoutX="254.0" layoutY="173.0" text=".....................For Later......................."/>
 
-       <Button fx:id="uc3Btn" layoutX="260.0" layoutY="200.0" mnemonicParsing="false"  text="UC3 Btn" />
+       <Button fx:id="productCompBtn" layoutX="100.0" layoutY="200.0" mnemonicParsing="false"  onAction="#toAddProductComponent" text="Add Component" />
+       <Button fx:id="uc3Btn" layoutX="260.0" layoutY="200.0" mnemonicParsing="false"  onAction="#toProductSpecification" text="Product Specification" />
        <Button fx:id="uc4Btn" layoutX="260.0" layoutY="240.0" mnemonicParsing="false"  text="UC4 Btn" />
        <Button fx:id="uc5Btn" layoutX="260.0" layoutY="280.0" mnemonicParsing="false"  text="UC5 Btn" />
        <Button fx:id="uc6Btn" layoutX="260.0" layoutY="320.0" mnemonicParsing="false" text="UC6 Btn" />
